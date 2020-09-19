@@ -1815,6 +1815,80 @@
           "help": "$bot_in_secret_help"
         }
       ]
+    },
+    {
+      "type": "signalR",
+      "displayName": "$signalR_out_displayName",
+      "direction": "out",
+      "enabledInTryMode": false,
+      "documentation": "$content=Documentation\\signalROut.md",
+      "settings": [
+        {
+          "name": "name",
+          "value": "string",
+          "defaultValue": "$return",
+          "required": true,
+          "label": "$signalR_out_name_label",
+          "help": "$signalR_out_name_help",
+          "validators": [
+            {
+              "expression": "(^[a-zA-Z][a-zA-Z0-9]{0,127}$)|^\\$return$",
+              "errorText": "[variables('parameterName')]"
+            }
+          ]
+        },
+        {
+          "name": "hubName",
+          "value": "string",
+          "required": true,
+          "label": "$signalR_botId_label",
+          "help": "$signalR_botId_help"
+        },
+        {
+          "name": "connectionStringSetting",
+          "value": "string",
+          "required": true,
+          "label": "$signalR_out_connectionStringSetting_label",
+          "help": "$signalR_out_connectionStringSetting_help"
+        }
+      ]
+    },
+    {
+      "type": "signalRConnectionInfo",
+      "displayName": "$signalRConnectionInfo_in_displayName",
+      "direction": "in",
+      "enabledInTryMode": false,
+      "documentation": "$content=Documentation\\signalRConnectionInfoIn.md",
+      "settings": [
+        {
+          "name": "name",
+          "value": "string",
+          "defaultValue": "signalRConnectionInfo",
+          "required": true,
+          "label": "$signalRConnectionInfo_in_name_label",
+          "help": "$signalRConnectionInfo_in_name_help",
+          "validators": [
+            {
+              "expression": "^[a-zA-Z][a-zA-Z0-9]{0,127}$",
+              "errorText": "[variables('parameterName')]"
+            }
+          ]
+        },
+        {
+          "name": "hubName",
+          "value": "string",
+          "required": true,
+          "label": "$signalRConnectionInfo_in_hubName_label",
+          "help": "$signalRConnectionInfo_in_hubName_help"
+        },
+        {
+          "name": "connectionStringSetting",
+          "value": "string",
+          "required": true,
+          "label": "$signalRConnectionInfo_in_connectionStringSetting_label",
+          "help": "$signalRConnectionInfo_in_connectionStringSetting_help"
+        }
+      ]
     }
   ]
 }
